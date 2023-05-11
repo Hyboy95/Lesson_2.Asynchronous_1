@@ -10,24 +10,20 @@ const onMyBirthday = (isKayoSick, cakesQuantity) => {
     })
 }
 
-onMyBirthday(false, 5)
-    .then((result) => {
-        console.log(`I have ${result} cakes`);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-    .finally(() => {
-        console.log("Party");
-    });
+function celebrateBirthday(isKayoSick, cakesQuantity) {
+    onMyBirthday(isKayoSick, cakesQuantity)
+        .then((result) => {
+            console.log(`I have ${result} cakes`);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            console.log("Party");
+        });
+}
 
-onMyBirthday(true, 5)
-    .then((result) => {
-        console.log(`I have ${result} cakes`);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-    .finally(() => {
-        console.log("Party");
-    });
+celebrateBirthday(false, 5);
+celebrateBirthday(true, 5);
+
+
